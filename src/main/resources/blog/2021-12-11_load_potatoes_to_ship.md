@@ -28,7 +28,7 @@ We want to be able to plant potatoes and load them to our ship.
 
 
 ### Build the potatoes store
-We want to have a potatoes storage at our ship so that we can carry them
+We want to have a potatoes storage at our ship so that we can carry them. This will cost 4 wood.
 
  * Go to see the docked "leonard" "ship" "Beagle".
  * Given that the "leonard" "city" "Capital" has resource "wood" count 4.
