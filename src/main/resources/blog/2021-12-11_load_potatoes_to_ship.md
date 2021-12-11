@@ -4,27 +4,20 @@ coder: NoeliaMGU
 ---
 
 # Load Potatoes To Ship
+We want to be able to plant potatoes and load them to our ship.
 
 ## Potatoes, potatoes, potatoes
-Cal un jugador jugant a la ciutat
+
+### Build the potato plantation
  * Go to the next player "leonard"
  <!-- SNAPSHOT status=200 -->
  * Go to the "leonard" "city" "Capital".
-
-Calen que les patates existeixin:
-Afegir a ResourcedTyped
  * The resource "potato" round increment should be 0.
-
-Cal que hi hagi un edifici de plantació de patates
-Posar un cost, ex: 5 bananes
  * Given that the "leonard" "city" "Capital" has resource "banana" count 5.
-
-Afegir buildings.factory de PotatoPlantationFactory (ex HouseFactory) i que sigui de tipus building
  * Go to the contained "building" "Builder".
  * Build the "Potato plantation".
  <!-- SNAPSHOT status=200 -->
 
-Veure que funciona
  * There should contain the "building" "Potato plantation".
  * The resource "potato" round increment should be 1.
  * The resource "potato" count should be 0.
@@ -33,25 +26,24 @@ Veure que funciona
  <!-- SNAPSHOT status=200 -->
  * The resource "potato" count should be 1.
 
-Cal que el vaixell tingui un deck de PatatesStore
-Anar al vaixell
- * Go to see the docked "leonard" "ship" "Beagle".
 
-Posar un cost, ex: 4 of wood
+### Build the potatoes store
+We want to have a potatoes storage at our ship so that we can carry them
+
+ * Go to see the docked "leonard" "ship" "Beagle".
  * Given that the "leonard" "city" "Capital" has resource "wood" count 4.
  * Given that the "leonard" "city" "Capital" has resource "potato" count 5.
-
-Afegir un decks.factories BananaStoreFactory de tipus deck
  * The resource "potato" maximum should be 0.
  * Go to the contained "deck" "Builder".
  * Build the "Potato store".
  <!-- SNAPSHOT status=200 -->
 
-Comprovar que ha funcionat
  * There should contain the "deck" "Potato store".
  * The resource "potato" maximum should be 5.
  * The resource "potato" count should be 0.
  * The resource "wood" count should be 0.
+ 
+### Now try to load potatoes to the storage
  * Load 5 of "potato"
  <!-- SNAPSHOT status=200 -->
  * The resource "potato" count should be 5.
